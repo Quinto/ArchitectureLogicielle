@@ -61,13 +61,15 @@ public class Ligne implements Chemin{
 	//======================================================================//
 
 	@Override
-	public void dessinerChemin(Crayon c) {
+	public Instruction dessinerChemin(Crayon c) {
 		g.setComposite(java.awt.AlphaComposite.getInstance(java.awt.AlphaComposite.SRC_OVER, this.getCrayon().getOpacite()));	
 		g.setColor(this.crayon.getCouleur());
 		g.setStroke(new BasicStroke(this.crayon.getLargeurBordure()));
 
 		g.drawLine(this.getX1().getX(), this.getX1().getY(), this.getX2().getX(), this.getX2().getY());
 		g.setComposite(java.awt.AlphaComposite.getInstance(java.awt.AlphaComposite.SRC_OVER, 1.0f));
+		
+		return new Creation();
 	}
 
 	@Override
@@ -76,24 +78,24 @@ public class Ligne implements Chemin{
 		this.setX2(new Point(this.getX2().getX()+x, this.getX2().getY()+y));
 	}
 
-	@Override
-	public boolean contient(Point point) {
-		if(this.getX1().getX() <= this.getX2().getX() && this.getX1().getY() <= this.getX2().getY()) {
-			return ((point.getX() >= this.getX1().getX()) && (point.getY() >= this.getX1().getY()) &&
-					(point.getX() <= this.getX2().getX()) && (point.getY() <= this.getX2().getY()));
-		} else if(this.getX1().getX() >= this.getX2().getX() && this.getX1().getY() >= this.getX2().getY()) {
-			return ((point.getX() <= this.getX1().getX()) && (point.getY()<= this.getX1().getY()) &&
-					(point.getX() >=this.getX2().getX()) && (point.getY() >=this.getX2().getY()));
-		} else if(this.getX1().getX() <= this.getX2().getX() && this.getX1().getY() >= this.getX2().getY()) {
-			return ((point.getX() >= this.getX1().getX()) && (point.getY()<= this.getX1().getY()) &&
-					(point.getX() <=this.getX2().getX()) && (point.getY() >=this.getX2().getY()));
-		} else if(this.getX1().getX() >= this.getX2().getX() && this.getX1().getY() <= this.getX2().getY()) {
-			return ((point.getX() <= this.getX1().getX()) && (point.getY()>= this.getX1().getY()) &&
-					(point.getX() >=this.getX2().getX()) && (point.getY() <=this.getX2().getY()));
-		} else {
-			return false;
-		}
-	}
+//	@Override
+//	public boolean contient(Point point) {
+//		if(this.getX1().getX() <= this.getX2().getX() && this.getX1().getY() <= this.getX2().getY()) {
+//			return ((point.getX() >= this.getX1().getX()) && (point.getY() >= this.getX1().getY()) &&
+//					(point.getX() <= this.getX2().getX()) && (point.getY() <= this.getX2().getY()));
+//		} else if(this.getX1().getX() >= this.getX2().getX() && this.getX1().getY() >= this.getX2().getY()) {
+//			return ((point.getX() <= this.getX1().getX()) && (point.getY()<= this.getX1().getY()) &&
+//					(point.getX() >=this.getX2().getX()) && (point.getY() >=this.getX2().getY()));
+//		} else if(this.getX1().getX() <= this.getX2().getX() && this.getX1().getY() >= this.getX2().getY()) {
+//			return ((point.getX() >= this.getX1().getX()) && (point.getY()<= this.getX1().getY()) &&
+//					(point.getX() <=this.getX2().getX()) && (point.getY() >=this.getX2().getY()));
+//		} else if(this.getX1().getX() >= this.getX2().getX() && this.getX1().getY() <= this.getX2().getY()) {
+//			return ((point.getX() <= this.getX1().getX()) && (point.getY()>= this.getX1().getY()) &&
+//					(point.getX() >=this.getX2().getX()) && (point.getY() <=this.getX2().getY()));
+//		} else {
+//			return false;
+//		}
+//	}
 
 	//======================================================================//
 	//======================= Getters and Setters ==========================//

@@ -17,7 +17,7 @@ public interface Chemin extends Objet {
 	 * 
 	 * @param g Variable permettant de dessiner dans une fenetre.
 	 */
-	public void dessinerChemin(Crayon c);
+	public Instruction dessinerChemin(Crayon c);
 
 
 	/**
@@ -26,7 +26,7 @@ public interface Chemin extends Objet {
 	 * @param x Valeur du deplacement du chemin sur l'axe des abscisses.
 	 * @param y	Valeur du deplacement du chemin sur l'axe des ordonnees.
 	 */
-	public void deplacer(int x, int y);
+	public Instruction deplacer(int x, int y);
 
 
 	/**
@@ -35,7 +35,7 @@ public interface Chemin extends Objet {
 	 * @param point Coordonnee du point duquel on veut savoir si il est dans le chemin ou non.
 	 * @return vrai si le <i>point</i> est dans le chemin, sinon faux. 
 	 */
-	public boolean contient(Point point);
+	//public boolean contient(Point point);
 
 
 }
