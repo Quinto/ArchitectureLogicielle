@@ -9,7 +9,7 @@ import java.awt.Point;
  * @author Sylla & Zaninetti
  *
  */
-public class Polygone extends Chemin{
+public class Polygone implements Chemin {
 
 	//======================================================================//
 	//============================ Variables ===============================//

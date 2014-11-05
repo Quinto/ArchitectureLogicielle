@@ -1,6 +1,8 @@
 package langage;
 
 import java.rmi.UnexpectedException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -14,12 +16,14 @@ public class Dessin {
 	private boolean contour;
 	private boolean dessinPrincipal;
 	private Dessin dessinInsere;
+	private List<Objet> objetsDessin;
 	
 	public Dessin(int largeur, int longueur) {
 		this.largeur = largeur;
 		this.longueur = longueur;
 		this.contour = false;
 		this.dessinInsere = null;
+		this.objetsDessin = new ArrayList<Objet>();
 	}
 	
 	public void dessiner(Chemin chemin, Crayon crayon) {
