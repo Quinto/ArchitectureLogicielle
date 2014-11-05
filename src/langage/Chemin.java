@@ -1,8 +1,5 @@
 package langage;
 
-import java.awt.Graphics2D;
-import java.awt.Point;
-
 /**
  * 
  * @author Sylla & Zaninetti
