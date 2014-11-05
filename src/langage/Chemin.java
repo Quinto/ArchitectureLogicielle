@@ -52,7 +52,7 @@ public abstract class Chemin {
 	 * 
 	 * @param g Variable permettant de dessiner dans une fenetre.
 	 */
-	public abstract void dessinerchemin(Graphics2D g);
+	public abstract void dessinerChemin(Graphics2D g);
 
 
 	/**
