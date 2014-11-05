@@ -31,4 +31,36 @@ public class Crayon {
 		this.couleur = couleur;
 		this.opacite = opacite;
 	}
+
+	public int getLargeurBordure() {
+		return largeurBordure;
+	}
+
+	public void setLargeurBordure(int largeurBordure) {
+		this.largeurBordure = largeurBordure;
+	}
+
+	public float getOpaciteBordure() {
+		return opaciteBordure;
+	}
+
+	public void setOpaciteBordure(float opaciteBordure) {
+		this.opaciteBordure = opaciteBordure;
+	}
+
+	public Color getCouleur() {
+		return couleur;
+	}
+
+	public void setCouleur(Color couleur) {
+		this.couleur = couleur;
+	}
+
+	public float getOpacite() {
+		return opacite;
+	}
+
+	public void setOpacite(float opacite) {
+		this.opacite = opacite;
+	}
 }

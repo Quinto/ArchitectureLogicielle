@@ -20,7 +20,7 @@ public interface Chemin {
 	 * 
 	 * @param g Variable permettant de dessiner dans une fenetre.
 	 */
-	public abstract void dessinerChemin(Graphics2D g);
+	public void dessinerChemin(Crayon c);
 
 
 	/**
@@ -29,7 +29,7 @@ public interface Chemin {
 	 * @param x Valeur du deplacement du chemin sur l'axe des abscisses.
 	 * @param y	Valeur du deplacement du chemin sur l'axe des ordonnees.
 	 */
-	public abstract void deplacer(int x, int y);
+	public void deplacer(int x, int y);
 
 
 	/**
@@ -38,7 +38,7 @@ public interface Chemin {
 	 * @param point Coordonnee du point duquel on veut savoir si il est dans le chemin ou non.
 	 * @return vrai si le <i>point</i> est dans le chemin, sinon faux. 
 	 */
-	public abstract boolean contient(Point point);
+	public boolean contient(Point point);
 
 
 }
