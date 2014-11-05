@@ -9,7 +9,7 @@ import java.util.List;
  * @author Sylla & Zaninetti
  *
  */
-public class Dessin {
+public class Dessin implements Objet {
 
 	private int largeur;
 	private int longueur;
@@ -17,19 +17,30 @@ public class Dessin {
 	private boolean dessinPrincipal;
 	private Dessin dessinInsere;
 	private List<Objet> objetsDessin;
+	private String name;
 	
-	public Dessin(int largeur, int longueur) {
+	public Dessin(int largeur, int longueur, String name) {
+		this.name = name;
 		this.largeur = largeur;
 		this.longueur = longueur;
 		this.contour = false;
 		this.dessinInsere = null;
 		this.objetsDessin = new ArrayList<Objet>();
+		objetsDessin.add(this);
 	}
 	
-	public void dessiner(Chemin chemin, Crayon crayon) {
-		chemin.dessinerChemin(crayon);
+	public void dessiner(Chemin chemin) {
+		
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public void dessinFerme() {
 		contour = true;
 	}
