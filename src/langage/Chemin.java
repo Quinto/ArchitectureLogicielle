@@ -9,39 +9,7 @@ import java.awt.Point;
  *
  */
 
-public abstract class Chemin {
-
-	//======================================================================//
-	//============================ Variables ===============================//
-	//======================================================================//
-	
-	// On met les variables en protected pour qu'elles soient visibles par
-	// les classes etendant Chemin
-	
-	protected int x;
-	protected int y;
-
-	protected Crayon crayon;
-	
-	/**
-	 * Constructeur par defaut
-	 */
-	public Chemin(){
-		this.x = -1;
-		this.y = -1;
-		this.crayon = new Crayon();
-	}
-
-	/**
-	 * Cree une nouvelle instance Chemin qui sera un clone de c
-	 * @param c : Chemin a cloner
-	 */
-	public Chemin(Chemin c){
-		this.x = c.getX();
-		this.y = c.getY();
-		
-		this.crayon = c.getCrayon();
-	}
+public interface Chemin {
 
 	//======================================================================//
 	//======================== Methodes abstraites =========================//
@@ -72,57 +40,5 @@ public abstract class Chemin {
 	 */
 	public abstract boolean contient(Point point);
 
-
-	//======================================================================//
-	//========================= Getters et Setters =========================//
-	//======================================================================//
-
-	/**
-	 * 
-	 * @return
-	 */
-	public int getX() {
-		return x;
-	}
-
-	/**
-	 * 
-	 * @param x
-	 */
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public int getY() {
-		return y;
-	}
-
-	/**
-	 * 
-	 * @param y
-	 */
-	public void setY(int y) {
-		this.y = y;
-	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public Crayon getCrayon(){
-		return this.crayon;
-	}
-	
-	/**
-	 * 
-	 * @param crayon
-	 */
-	public void setY(Crayon crayon) {
-		this.crayon = crayon;
-	}
 
 }
