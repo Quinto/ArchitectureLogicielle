@@ -15,10 +15,11 @@ public class Cercle implements Chemin {
 		this.rayon = rayon;
 	}
 	
-	public void deplacer(int x, int y) {
+	public Instruction deplacer(int x, int y) {
 		// TODO Auto-generated method stub
 		setAbscisseCentre(getAbscisseCentre() + x);
 		setOrdonneeCentre(getOrdonneeCentre() + y);
+		return new CreationObjet();
 	}
 	
 	public int getAbscisseCentre() {
@@ -46,7 +47,8 @@ public class Cercle implements Chemin {
 	}
 
 	@Override
-	public void dessinerChemin(Crayon c) {
+	public Instruction dessinerChemin(Crayon c) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

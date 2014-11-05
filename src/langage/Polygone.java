@@ -45,7 +45,6 @@ public class Polygone implements Chemin {
 	 * @param chemin Chemin
 	 */
 	public Polygone(Chemin chemin) {	
-		super(chemin);
 		Polygone m = (Polygone) chemin;
 
 		this.rayon = m.rayon;
@@ -67,30 +66,13 @@ public class Polygone implements Chemin {
 		this.maxX = m.maxX;
 		this.maxY = m.maxY;
 	}
-
-	//======================================================================//
-	//==================== Ecriture methodes abstraites ====================//
-	//======================================================================//
 	
-	@Override
-	public void dessinerchemin(Graphics2D g) {
-		g.setComposite(java.awt.AlphaComposite.getInstance(java.awt.AlphaComposite.SRC_OVER, this.crayon.opacite));	
-		g.setColor(this.crayon.couleur);
-		g.fillPolygon(this.pointX, this.pointY, this.nbPoint);	
-		
-		if(this.crayon.largeurBordure > 0) {
-			g.setComposite(java.awt.AlphaComposite.getInstance(java.awt.AlphaComposite.SRC_OVER, this.crayon.opaciteBordure));
-			g.setStroke(new BasicStroke(this.crayon.largeurBordure));
-			g.drawPolygon(this.pointX, this.pointY, this.nbPoint);
-		}
-		
-		g.setComposite(java.awt.AlphaComposite.getInstance(java.awt.AlphaComposite.SRC_OVER, 1.0f));
-	}
+
 
 	@Override
-	public void deplacer(int x, int y) {
-		this.x += x;
-		this.y += y;
+	public Instruction deplacer(int x, int y) {
+//		this.x += x;		probleme ici
+//		this.y += y;		probleme ici
 		
 		this.minX += x;
 		this.minY += y;
@@ -101,14 +83,21 @@ public class Polygone implements Chemin {
 			this.pointX[i] += x;
 			this.pointY[i] += y;
 		}
+		return new CreationObjet();
 	}
 
+
 	@Override
+	public Instruction dessinerChemin(Crayon c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+/*	@Override
 	public boolean contient(Point point) {
 		return (this.x - this.rayon <= point.x) &&
 				(this.y - this.rayon <= point.y) &&
 				(point.x <= (this.x - this.rayon) + (this.rayon * 2)) &&
 				(point.y <= (this.y - this.rayon) + (this.rayon * 2));
-	}
-
+	}*/
 }
