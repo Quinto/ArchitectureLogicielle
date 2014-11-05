@@ -9,7 +9,7 @@ import java.awt.Point;
  *
  */
 
-public interface Chemin {
+public interface Chemin extends Objet {
 
 	//======================================================================//
 	//======================== Methodes abstraites =========================//
