@@ -1,7 +1,6 @@
 package langage;
 
 import java.awt.BasicStroke;
-import java.awt.Graphics2D;
 
 /**
  * 
@@ -63,7 +62,7 @@ public class Ligne implements Chemin{
 	@Override
 	public Instruction dessinerChemin(Crayon c) {
 
-		return new CreationObjet();
+		return null;
 	}
 
 	@Override

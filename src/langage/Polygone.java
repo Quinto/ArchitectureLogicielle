@@ -83,7 +83,7 @@ public class Polygone implements Chemin {
 			this.pointX[i] += x;
 			this.pointY[i] += y;
 		}
-		return new CreationObjet();
+		return new null;
 	}
 
 
