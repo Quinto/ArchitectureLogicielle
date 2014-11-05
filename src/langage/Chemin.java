@@ -29,13 +29,4 @@ public interface Chemin extends Objet {
 	public void deplacer(int x, int y);
 
 
-	/**
-	 * Cette methode permet de savoir si le <i>point</i> est dans le chemin.
-	 * 
-	 * @param point Coordonnee du point duquel on veut savoir si il est dans le chemin ou non.
-	 * @return vrai si le <i>point</i> est dans le chemin, sinon faux. 
-	 */
-	public boolean contient(Point point);
-
-
 }
