@@ -5,12 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
-import langage.Dessin;
+import langage.Script;
 
 public class InterpreteurSVG implements Interpreteur {
 
 	@Override
-	public File interpreter(Dessin d) {
+	public File interpreter(Script s) {
 		// TODO Auto-generated method stub
 		File file = new File("DessinInterprete.svg");
 		
@@ -32,8 +32,8 @@ public class InterpreteurSVG implements Interpreteur {
 	
 	public static void main(String[] args) {
 		InterpreteurSVG intSVG = new InterpreteurSVG();
-		Dessin dessin = new Dessin("Exemple");
-		intSVG.interpreter(dessin);
+		Script scipt = new Script();
+		intSVG.interpreter(scipt);
 	}
 
 }
