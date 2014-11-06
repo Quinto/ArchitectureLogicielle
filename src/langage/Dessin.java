@@ -10,18 +10,38 @@ import java.util.List;
  *
  */
 public class Dessin implements Objet {
-
+	
+	private int longueur;
+	private int largeur;
 	private boolean contour;
 	private List<Objet> objetsDessin;
 	private String name;
 	
-	public Dessin(String name) {
+	public Dessin(String name, int longueur, int largeur) {
 		this.name = name;
+		this.longueur = longueur;
+		this.largeur = largeur;
 		this.contour = false;
 		this.objetsDessin = new ArrayList<Objet>();
 		objetsDessin.add(this);
 	}
 	
+	public int getLongueur() {
+		return longueur;
+	}
+
+	public void setLongueur(int longueur) {
+		this.longueur = longueur;
+	}
+
+	public int getLargeur() {
+		return largeur;
+	}
+
+	public void setLargeur(int largeur) {
+		this.largeur = largeur;
+	}
+
 	public void dessiner(Chemin chemin) {
 		objetsDessin.add(chemin);
 	}

@@ -11,8 +11,8 @@ import langage.Polygone;
 
 public class FabriqueChemin {
 
-	public static Chemin creerCercle(int abscisseCentre, int ordonneeCentre, int rayon, Dessin d) {
-		Chemin ch = new Cercle(abscisseCentre, ordonneeCentre, rayon);
+	public static Chemin creerCercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c, Dessin d) {
+		Chemin ch = new Cercle(abscisseCentre, ordonneeCentre, rayon, c);
 		ch.dessinerChemin(d);
 		return ch;
 	}

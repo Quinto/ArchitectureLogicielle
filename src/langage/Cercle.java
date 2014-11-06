@@ -9,10 +9,11 @@ public class Cercle extends Chemin {
 	private int rayon;
 	private Crayon crayon;
 	
-	public Cercle(int abscisseCentre, int ordonneeCentre, int rayon) {
+	public Cercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c) {
 		this.abscisseCentre = abscisseCentre;
 		this.ordonneeCentre = ordonneeCentre;
 		this.rayon = rayon;
+		this.crayon = c;
 	}
 	
 	public int getAbscisseCentre() {
@@ -37,6 +38,14 @@ public class Cercle extends Chemin {
 
 	public void setRayon(int rayon) {
 		this.rayon = rayon;
+	}
+	
+	public Crayon getCrayon() {
+		return crayon;
+	}
+	
+	public void setCrayon(Crayon c) {
+		crayon = c;
 	}
 
 	@Override
