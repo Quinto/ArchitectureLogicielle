@@ -2,7 +2,7 @@ package langage;
 
 import java.util.ArrayList;
 
-public class Script {
+public class Script implements IScript {
 
 	private ArrayList<Instruction> liste;
 
@@ -26,9 +26,9 @@ public class Script {
 		this.liste.add(i);
 	}
 	
-	public void executer(){
+	public void execute(){
 		for(Instruction i : liste){
-			i.executer();
+			i.execute();
 		}
 	}
 }

@@ -1,13 +1,12 @@
 package langage;
 
-public class For {
+public class For extends Instruction {
 
 	private Script script;
 	private int nbFois;
 	
 	public For(Script script){
 		this.script = script;
-		this.executer();
 	}
 
 	public Script getScript() {
@@ -26,9 +25,10 @@ public class For {
 		this.nbFois = nbFois;
 	}
 	
-	public void executer(){
+	@Override
+	public void execute(){
 		for(int i=0; i<this.getNbFois(); i++){
-			this.getScript().executer();
+			this.getScript().execute();
 		}
 		
 	}

@@ -1,7 +1,8 @@
 package langage;
 
-public interface Instruction {
+public class Instruction implements IScript {
 
-	public void executer();
+	public void execute() {
+		
+	}
 }
-
