@@ -15,29 +15,25 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		FabriqueObjet fabO = new FabriqueObjet();
-		FabriqueStructure fabS = new FabriqueStructure();
-		FabriqueChemin fabC = new FabriqueChemin();
 
-		IScript scriptPrincipal = fabS.creerScript();
-		IScript scriptBoucle = fabS.creerScript();
+		IScript scriptPrincipal = FabriqueStructure.creerScript();
+		IScript scriptBoucle = FabriqueStructure.creerScript();
 
-		Crayon c1 = fabO.creerCrayon(...);
-		Crayon c2 = fabO.creerCrayon(...);
+		Crayon c1 = FabriqueObjet.creerCrayon(...);
+		Crayon c2 = FabriqueObjet.creerCrayon(...);
 
-		Dessin d = fabO.creerDessin("mon dessin");
-		Interpreteur i = fab.creerInterpreteurSVG();
+		Dessin d = FabriqueObjet.creerDessin("mon dessin");
+		Interpreteur i = FabriqueStructure.creerInterpreteurSVG();
 
-		Instruction i1 = fabC.dessinerLigne((1, 2), (3, 1), c1, d);
-		Instruction i2 = fabC.dessinerLigne((4,0), (3, 0), c1, d);
-		Instruction i3 = fabC.dessinerPolygone(...);
+		Instruction i1 = FabriqueChemin.dessinerLigne((1, 2), (3, 1), c1, d);
+		Instruction i2 = FabriqueChemin.dessinerLigne((4,0), (3, 0), c1, d);
+		Instruction i3 = FabriqueChemin.dessinerPolygone(...);
 
 		scriptBoucle.add(i1);
 		scriptBoucle.add(i2);
 		scriptBoucle.add(i3);
 
-		Instruction i4 = fabS.creerFor((Script) scriptBoucle, 3);
+		Instruction i4 = FabriqueStructure.creerFor((Script) scriptBoucle, 3);
 		Instruction i5 = fab.creerInterpreteurSVG(d);
 
 		scriptPrincipal.add(i4);

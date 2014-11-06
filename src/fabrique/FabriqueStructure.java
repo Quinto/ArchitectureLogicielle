@@ -1,7 +1,7 @@
 package fabrique;
 
-import java.util.ArrayList;
-
+import vue.Interpreteur;
+import vue.InterpreteurSVG;
 import langage.For;
 import langage.IScript;
 import langage.Instruction;
@@ -15,5 +15,9 @@ public class FabriqueStructure {
 	
 	public static IScript creerScript(){
 		return new Script();
+	}
+	
+	public static Interpreteur creerInterpreteurSVG(){
+		return new InterpreteurSVG();
 	}
 }
