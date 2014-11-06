@@ -10,10 +10,6 @@ public class Script implements IScript {
 		this.liste = new ArrayList<Instruction>();
 	}
 	
-	public Script(ArrayList<Instruction> liste){
-		this.liste = liste;
-	}
-	
 	public ArrayList<Instruction> getListe() {
 		return liste;
 	}
@@ -22,8 +18,12 @@ public class Script implements IScript {
 		this.liste = liste;
 	}
 	
-	public void executerInstruction(Instruction i){
+	public void addInstruction(Instruction i){
 		this.liste.add(i);
+	}
+	
+	public void removeInstruction(Instruction i) {
+		this.liste.remove(i);
 	}
 	
 	public void execute(){

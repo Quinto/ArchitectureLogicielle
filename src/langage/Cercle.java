@@ -2,7 +2,7 @@ package langage;
 
 import java.awt.Graphics2D;
 
-public class Cercle implements Chemin {
+public class Cercle extends Chemin {
 
 	private int abscisseCentre;
 	private int ordonneeCentre;
@@ -13,13 +13,6 @@ public class Cercle implements Chemin {
 		this.abscisseCentre = abscisseCentre;
 		this.ordonneeCentre = ordonneeCentre;
 		this.rayon = rayon;
-	}
-	
-	public Instruction deplacer(int x, int y) {
-		// TODO Auto-generated method stub
-		setAbscisseCentre(getAbscisseCentre() + x);
-		setOrdonneeCentre(getOrdonneeCentre() + y);
-		return new CreationObjet();
 	}
 	
 	public int getAbscisseCentre() {
@@ -47,10 +40,8 @@ public class Cercle implements Chemin {
 	}
 
 	@Override
-	public Instruction dessinerChemin(Crayon c) {
-		return null;
-		// TODO Auto-generated method stub
-		
+	public void dessinerChemin(Dessin d) {
+		d.dessiner(this);
 	}
 	
 	

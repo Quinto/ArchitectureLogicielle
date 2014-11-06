@@ -1,9 +1,9 @@
-package langage;
+/*package langage;
 
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-public class Courbe implements Chemin {
+public class Courbe extends Chemin {
 
 	public Courbe(){
 		
@@ -22,5 +22,5 @@ public class Courbe implements Chemin {
 		// TODO Auto-generated method stub
 		
 	}
-
-}
+*/
+//}

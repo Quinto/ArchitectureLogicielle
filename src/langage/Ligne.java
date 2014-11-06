@@ -47,9 +47,8 @@ public class Ligne extends Chemin{
 	//======================================================================//
 
 	@Override
-	public Instruction dessinerChemin(Crayon c) {
-
-		return null;
+	public void dessinerChemin(Dessin d) {
+		d.dessiner(this);
 	}
 
 

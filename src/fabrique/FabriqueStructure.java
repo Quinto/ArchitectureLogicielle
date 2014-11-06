@@ -9,11 +9,11 @@ import langage.Script;
 
 public class FabriqueStructure {
 
-	public static Instruction creerFor(Script script){
-		return new For(script);
+	public static Instruction creerFor(Script script, int nbIterations){
+		return new For(script, nbIterations);
 	}
 	
-	public static IScript creerScript(ArrayList<Instruction> liste){
-		return new Script(liste);
+	public static IScript creerScript(){
+		return new Script();
 	}
 }

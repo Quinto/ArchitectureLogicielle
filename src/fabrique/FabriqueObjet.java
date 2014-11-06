@@ -12,7 +12,7 @@ public class FabriqueObjet {
 		return new Crayon(largeurBordure, opaciteBordure, couleur, opacite);
 	}
 	
-	public static Objet creerDessin(int largeur, int longueur, String name){
-		return new Dessin(largeur, longueur, name);
+	public static Dessin creerDessin(String name){
+		return new Dessin(name);
 	}
 }

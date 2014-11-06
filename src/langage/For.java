@@ -5,8 +5,9 @@ public class For extends Instruction {
 	private Script script;
 	private int nbFois;
 	
-	public For(Script script){
+	public For(Script script, int nbFois){
 		this.script = script;
+		this.nbFois = nbFois;
 	}
 
 	public Script getScript() {

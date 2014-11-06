@@ -6,7 +6,7 @@ package langage;
  *
  */
 
-public abstract class Chemin extends Instruction {
+public abstract class Chemin extends Instruction implements Objet {
 
 	//======================================================================//
 	//======================== Methodes abstraites =========================//
@@ -17,7 +17,7 @@ public abstract class Chemin extends Instruction {
 	 * 
 	 * @param g Variable permettant de dessiner dans une fenetre.
 	 */
-	public abstract Instruction dessinerChemin(Crayon c);
+	public abstract void dessinerChemin(Dessin d);
 
 
 	/**

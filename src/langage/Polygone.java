@@ -7,20 +7,19 @@ import java.awt.Point;
 /**
  * 
  * @author Sylla & Zaninetti
- *
+ *																					
  */
-public class Polygone implements Chemin {
+public class Polygone extends Chemin {
 
 	//======================================================================//
 	//============================ Variables ===============================//
 	//======================================================================//
 
-	private int pointX[]; // coordonnees x
-	private int pointY[]; // coordonnees y
-	private int rayon; // rayon
-	private int decalage; // decalage du polygone 
-	private int nbPoint = 6; // nombre de point du polygone
-
+	private int[] pointsX; // coordonnees x
+	private int[] pointsY; // coordonnees y
+	private int nbPoints; // nombre de point du polygone
+	private Crayon crayon;
+	
 	private int minX; // valeur minimal des coordonnees x
 	private int minY; // valeur minimal des coordonnees y
 	private int maxX; // valeur maximal des coordonnees x
@@ -34,70 +33,15 @@ public class Polygone implements Chemin {
 	/**
 	 * Cree une nouvelle instance de <i>Polygone</i> par defaut.
 	 */
-	public Polygone(){
-
-	}
-
-
-	/**
-	 * Cree une nouvelle instance de <i>Polygone</i> qui sera un clone de <i>chemin</i>.
-	 * 
-	 * @param chemin Chemin
-	 */
-	public Polygone(Chemin chemin) {	
-		Polygone m = (Polygone) chemin;
-
-		this.rayon = m.rayon;
-		this.decalage = m.decalage;
-
-		this.nbPoint = m.nbPoint;
-
-		this.pointX = new int[this.nbPoint];
-		this.pointY = new int[this.nbPoint];
-
-		for(int i = 0; i < this.nbPoint; i++) {
-			this.pointX[i] = m.pointX[i];
-			this.pointY[i] = m.pointY[i];
-		}
-
-		this.minX = m.minX;
-		this.minY = m.minY;
-
-		this.maxX = m.maxX;
-		this.maxY = m.maxY;
+	public Polygone(int[] pointsX, int[] pointsY, Crayon c) {
+		this.pointsX = pointsX;
+		this.pointsY = pointsY;
+		this.crayon = c;
 	}
 	
-
-
 	@Override
-	public Instruction deplacer(int x, int y) {
-//		this.x += x;		probleme ici
-//		this.y += y;		probleme ici
-		
-		this.minX += x;
-		this.minY += y;
-		this.maxX += x;
-		this.maxY += y;
-		
-		for(int i = 0; i < this.nbPoint; i++) {
-			this.pointX[i] += x;
-			this.pointY[i] += y;
-		}
-		return null;
-	}
-
-
-	@Override
-	public Instruction dessinerChemin(Crayon c) {
+	public void dessinerChemin(Dessin d) {
 		// TODO Auto-generated method stub
-		return null;
+		d.dessiner(this);
 	}
-
-/*	@Override
-	public boolean contient(Point point) {
-		return (this.x - this.rayon <= point.x) &&
-				(this.y - this.rayon <= point.y) &&
-				(point.x <= (this.x - this.rayon) + (this.rayon * 2)) &&
-				(point.y <= (this.y - this.rayon) + (this.rayon * 2));
-	}*/
 }
