@@ -7,6 +7,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+
 import langage.Dessin;
 
 public class InterpreteurSVG implements Interpreteur {
@@ -23,6 +27,7 @@ public class InterpreteurSVG implements Interpreteur {
 		output.newLine();
 		output.write("<svg width=" + d.getLargeur() + " height=" + d.getLongueur() + " version=1.1 xmlns=\"http://www.w3.org/2000/svg\">");
 		output.newLine();
+		output.close();
 		return file;
 	}
 

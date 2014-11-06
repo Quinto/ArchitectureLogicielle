@@ -7,6 +7,7 @@ import langage.Crayon;
 import langage.Dessin;
 import langage.IScript;
 import langage.Instruction;
+import langage.Point;
 import langage.Script;
 
 public class Main {
@@ -25,9 +26,9 @@ public class Main {
 		Dessin d = FabriqueObjet.creerDessin("mon dessin");
 		Interpreteur i = FabriqueStructure.creerInterpreteurSVG();
 
-		Instruction i1 = FabriqueChemin.dessinerLigne((1, 2), (3, 1), c1, d);
-		Instruction i2 = FabriqueChemin.dessinerLigne((4,0), (3, 0), c1, d);
-		Instruction i3 = FabriqueChemin.dessinerPolygone(...);
+		Instruction i1 = FabriqueChemin.creerLigne(new Point(1, 2), new Point(3, 1), c1, d);
+		Instruction i2 = FabriqueChemin.creerLigne(new Point(4,0), new Point(3, 0), c1, d);
+		Instruction i3 = FabriqueChemin.creerPolygone(...);
 
 		scriptBoucle.add(i1);
 		scriptBoucle.add(i2);

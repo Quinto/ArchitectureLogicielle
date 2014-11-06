@@ -8,4 +8,5 @@ import langage.Dessin;
 public interface Interpreteur {
 
 	public File interpreter(Dessin d) throws IOException;
+
 }
