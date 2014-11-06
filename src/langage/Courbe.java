@@ -5,6 +5,10 @@ import java.awt.Point;
 
 public class Courbe implements Chemin {
 
+	public Courbe(){
+		
+	}
+	
 	@Override
 	public Instruction deplacer(int x, int y) {
 		return null;
