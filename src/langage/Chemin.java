@@ -6,7 +6,7 @@ package langage;
  *
  */
 
-public interface Chemin extends Objet {
+public abstract class Chemin extends Instruction {
 
 	//======================================================================//
 	//======================== Methodes abstraites =========================//
@@ -17,7 +17,7 @@ public interface Chemin extends Objet {
 	 * 
 	 * @param g Variable permettant de dessiner dans une fenetre.
 	 */
-	public Instruction dessinerChemin(Crayon c);
+	public abstract Instruction dessinerChemin(Crayon c);
 
 
 	/**
@@ -26,7 +26,7 @@ public interface Chemin extends Objet {
 	 * @param x Valeur du deplacement du chemin sur l'axe des abscisses.
 	 * @param y	Valeur du deplacement du chemin sur l'axe des ordonnees.
 	 */
-	public Instruction deplacer(int x, int y);
+//	public abstract Instruction deplacer(int x, int y);
 
 
 	/**

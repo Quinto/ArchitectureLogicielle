@@ -7,7 +7,7 @@ import java.awt.BasicStroke;
  * @author Sylla & Zaninetti
  *
  */
-public class Ligne implements Chemin{
+public class Ligne extends Chemin{
 
 	//======================================================================//
 	//============================ Variables ===============================//
