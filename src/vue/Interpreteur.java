@@ -2,9 +2,9 @@ package vue;
 
 import java.io.File;
 
-import langage.Script;
+import langage.Dessin;
 
 public interface Interpreteur {
 
-	public File interpreter(Script s);
+	public File interpreter(Dessin dessin);
 }

@@ -5,12 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
-import langage.Script;
+import langage.Dessin;
 
 public class InterpreteurSVG implements Interpreteur {
 
 	@Override
-	public File interpreter(Script s) {
+	public File interpreter(Dessin dessin) {
 		// TODO Auto-generated method stub
 		File file = new File("DessinInterprete.svg");
 		
@@ -19,7 +19,7 @@ public class InterpreteurSVG implements Interpreteur {
 			ecrire.println("<?xml version='1.0'?>");
 			ecrire.println("<svg xmlns='http://www.w3.org/2000/svg' width='550' height='300'>");
 			
-			// Ecrire ici le dessin
+			// On ecrit ici notre dessin
 			
 			ecrire.println("</svg");
 			ecrire.close();
@@ -32,8 +32,8 @@ public class InterpreteurSVG implements Interpreteur {
 	
 	public static void main(String[] args) {
 		InterpreteurSVG intSVG = new InterpreteurSVG();
-		Script scipt = new Script();
-		intSVG.interpreter(scipt);
+		Dessin dessin = new Dessin("Dessin");
+		intSVG.interpreter(dessin);
 	}
 
 }
