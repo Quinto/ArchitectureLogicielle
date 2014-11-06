@@ -7,7 +7,7 @@ import java.awt.Color;
  * @author Sylla & Zaninetti
  *
  */
-public class Crayon {
+public class Crayon implements Objet{
 
 	//======================================================================//
 	//============================ Variables ===============================//
