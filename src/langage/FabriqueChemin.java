@@ -8,8 +8,8 @@ public class FabriqueChemin {
 		
 	}
 	
-	public static Chemin creerLigne(Point x1, Point x2) {
-		return new Ligne(x1, x2);
+	public static Chemin creerLigne(Point x1, Point x2, Crayon c) {
+		return new Ligne(x1, x2, c);
 	}
 	
 	public static Chemin creerPolygone(Chemin chemin) {

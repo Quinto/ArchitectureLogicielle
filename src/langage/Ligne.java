@@ -35,25 +35,12 @@ public class Ligne extends Chemin{
 	/**
 	 * Cree une nouvelle instance de <i>Ligne</i> a partir de deux points.
 	 */
-	public Ligne(Point x1, Point x2) {
+	public Ligne(Point x1, Point x2, Crayon crayon) {
 		this.x1 = x1;
 		this.x2 = x2;
-
-		this.crayon = new Crayon();
+		this.crayon = crayon;
 	}
 
-
-	/**
-	 * Cree une nouvelle instance de <i>Ligne</i> qui sera un clone de <i>chemin</i>.
-	 * 
-	 * @param chemin Chemin
-	 */
-	public Ligne(Chemin chemin) {	
-		Ligne l = (Ligne) chemin;
-
-		this.x1 = l.getX1();
-		this.x2 = l.getX2();
-	}
 
 	//======================================================================//
 	//==================== Ecriture methodes abstraites ====================//
@@ -65,12 +52,6 @@ public class Ligne extends Chemin{
 		return null;
 	}
 
-	@Override
-	public Instruction deplacer(int x, int y) {
-		this.setX1(new Point(this.getX1().getX()+x, this.getX1().getY()+y));
-		this.setX2(new Point(this.getX2().getX()+x, this.getX2().getY()+y));
-		return null;
-	}
 
 //	@Override
 //	public boolean contient(Point point) {
