@@ -27,7 +27,6 @@ public class Main {
 		Crayon c2 = fabO.creerCrayon(...);
 
 		Dessin d = fabO.creerDessin("mon dessin");
-		Interpreteur i = fab.creerInterpreteurSVG();
 
 		Instruction i1 = fabC.dessinerLigne((1, 2), (3, 1), c1, d);
 		Instruction i2 = fabC.dessinerLigne((4,0), (3, 0), c1, d);
