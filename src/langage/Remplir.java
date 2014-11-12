@@ -2,23 +2,26 @@ package langage;
 
 public class Remplir extends Instruction {
 
-	private Chemin chemin;
+	private Objet objet;
 	private String couleur;
 	
-	public Remplir(Chemin chemin, String couleur) {
-		this.chemin = chemin;
+	public Remplir(Objet objet, String couleur) {
+		this.objet = objet;
 		this.couleur = couleur;
 	}
 	
 	public void execute() throws UnsupportedOperationException {
-		if(chemin instanceof Cercle) {
-			((Cercle) chemin).setCouleurRemplissage(couleur);
+		if(objet instanceof Cercle) {
+			((Cercle) objet).setCouleurRemplissage(couleur);
 		}
-		else if(chemin instanceof Polygone) {
-			((Polygone) chemin).setCouleurRemplissage(couleur);
+		else if(objet instanceof Polygone) {
+			((Polygone) objet).setCouleurRemplissage(couleur);
 		}
-		else if(chemin instanceof Rectangle) {
-			((Rectangle) chemin).setCouleurRemplissage(couleur);
+		else if(objet instanceof Rectangle) {
+			((Rectangle) objet).setCouleurRemplissage(couleur);
+		}
+		else if(objet instanceof Etiqueter) {
+			((Etiqueter) objet).setCouleurRemplissage(couleur);
 		}
 		else {
 			throw new UnsupportedOperationException("Impossible de remplir un chemin non ferme");

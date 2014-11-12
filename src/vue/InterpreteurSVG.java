@@ -60,16 +60,32 @@ public class InterpreteurSVG implements Interpreteur {
 			s+="style=\"fill:" + ((Cercle) o).getCouleurRemplissage() + ";stroke:" + ((Cercle) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Cercle) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Cercle) o).getCrayon().getLargeurBordure() + ";\" />";
 		}
 		if(o instanceof Polygone) {
-			s+="<polygon ";
+			s+="<polygon points=\"";
+			for(int i=0; i<((Polygone) o).getNbPoints(); i++) {
+				s+=((Polygone) o).getPointsX()[i] + "," + ((Polygone) o).getPointsY()[i];
+				if(i != ((Polygone) o).getNbPoints() - 1) {
+					s+=" ";
+				}
+				else {
+					s+="\" ";
+				}
+			}
 			s+="style=\"fill:" + ((Polygone) o).getCouleurRemplissage() + ";stroke:" + ((Polygone) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Polygone) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Polygone) o).getCrayon().getLargeurBordure() + ";\" />";
-
 		}
 		if(o instanceof Rectangle) {
-			s+="<rect ";
+			s+="<rect x=\"" + ((Rectangle) o).getAbscisseOrigine() + "\" y=\"" + ((Rectangle) o).getOrdonneeOrigine() + "\" width=\"" + ((Rectangle) o).getLongueur() + "\" height=\"" + ((Rectangle) o).getLargeur() + "\" ";
 			s+="style=\"fill:" + ((Rectangle) o).getCouleurRemplissage() + ";stroke:" + ((Rectangle) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Rectangle) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Rectangle) o).getCrayon().getLargeurBordure() + ";\" />";
 		}
 		if(o instanceof Etiqueter) {
-			s+="";
+			s+="<text x=\"" + ((Etiqueter) o).getOrigineX() + "\" y=\"" + ((Etiqueter) o).getOrigineY() + "\" ";
+			s+="style=\"fill:" + ((Etiqueter) o).getCouleurRemplissage() + ";";
+			if(((Etiqueter) o).getCouleur() != null) {
+				s+="stroke:" + ((Etiqueter) o).getCouleur() + ";";
+			}
+			if(((Etiqueter) o).getTaillePolice() != 0) {
+				s+="font-size:" + ((Etiqueter) o).getTaillePolice() + "px;";
+			}
+			s+="\">" + ((Etiqueter) o).getTexte() + "</text>";
 		}
 		return s;
 	}
