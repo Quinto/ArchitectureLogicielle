@@ -17,9 +17,7 @@ import langage.Polygone;
 public class FabriqueChemin {
 
 	public static Chemin creerCercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c, Dessin d) {
-		Chemin ch = new Cercle(abscisseCentre, ordonneeCentre, rayon, c);
-		ch.dessinerChemin(d);
-		return ch;
+		return new Cercle(abscisseCentre, ordonneeCentre, rayon, c, d);
 	}
 	
 /*	public static Chemin creerCourbe(){
@@ -27,15 +25,11 @@ public class FabriqueChemin {
 	}*/
 	
 	public static Chemin creerLigne(Point x1, Point x2, Crayon c, Dessin d) {
-		Chemin ch = new Ligne(x1, x2, c);
-		ch.dessinerChemin(d);
-		return ch;
+		return new Ligne(x1, x2, c, d);
 	}
 	
 	public static Chemin creerPolygone(int[] pointsX, int[] pointsY, Crayon c, Dessin d) {
-		Chemin ch = new Polygone(pointsX, pointsY, c);
-		ch.dessinerChemin(d);
-		return ch;
+		return new Polygone(pointsX, pointsY, c, d);
 	}
 	
 }

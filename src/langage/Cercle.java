@@ -10,15 +10,28 @@ public class Cercle extends Chemin {
 	private int abscisseCentre;
 	private int ordonneeCentre;
 	private int rayon;
-	private Crayon crayon;
 	
-	public Cercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c) {
+	private Dessin d;
+	private Crayon crayon;
+	private String couleurRemplissage;
+	
+	public Cercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c, Dessin d) {
 		this.abscisseCentre = abscisseCentre;
 		this.ordonneeCentre = ordonneeCentre;
 		this.rayon = rayon;
 		this.crayon = c;
+		this.d = d;
+		couleurRemplissage = "none";
 	}
 	
+	public String getCouleurRemplissage() {
+		return couleurRemplissage;
+	}
+
+	public void setCouleurRemplissage(String couleurRemplissage) {
+		this.couleurRemplissage = couleurRemplissage;
+	}
+
 	public int getAbscisseCentre() {
 		return abscisseCentre;
 	}
@@ -51,10 +64,7 @@ public class Cercle extends Chemin {
 		crayon = c;
 	}
 
-	@Override
-	public void dessinerChemin(Dessin d) {
+	public void execute() {
 		d.dessiner(this);
 	}
-	
-	
 }

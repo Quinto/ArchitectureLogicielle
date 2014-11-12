@@ -2,10 +2,12 @@ package fabrique;
 
 import vue.Interpreteur;
 import vue.InterpreteurSVG;
+import langage.Alternative;
 import langage.For;
 import langage.IScript;
 import langage.Instruction;
 import langage.Script;
+import langage.Sequence;
 
 /**
  * 
@@ -14,8 +16,16 @@ import langage.Script;
  */
 public class FabriqueStructure {
 
-	public static Instruction creerFor(Script script, int nbIterations){
+	public static Instruction For(Script script, int nbIterations){
 		return new For(script, nbIterations);
+	}
+	
+	public static Sequence Sequence() {
+		return new Sequence();
+	}
+	
+	public static Instruction Alternative(boolean condition, IScript res1, IScript res2) {
+		return new Alternative(condition, res1, res2);
 	}
 	
 	public static Script creerScript(){
