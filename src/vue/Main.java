@@ -10,6 +10,11 @@ import langage.Instruction;
 import langage.Point;
 import langage.Script;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class Main {
 
 	/**

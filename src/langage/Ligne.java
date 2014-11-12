@@ -1,7 +1,5 @@
 package langage;
 
-import java.awt.BasicStroke;
-
 /**
  * 
  * @author Sylla & Zaninetti
@@ -50,27 +48,8 @@ public class Ligne extends Chemin{
 	public void dessinerChemin(Dessin d) {
 		d.dessiner(this);
 	}
-
-
-//	@Override
-//	public boolean contient(Point point) {
-//		if(this.getX1().getX() <= this.getX2().getX() && this.getX1().getY() <= this.getX2().getY()) {
-//			return ((point.getX() >= this.getX1().getX()) && (point.getY() >= this.getX1().getY()) &&
-//					(point.getX() <= this.getX2().getX()) && (point.getY() <= this.getX2().getY()));
-//		} else if(this.getX1().getX() >= this.getX2().getX() && this.getX1().getY() >= this.getX2().getY()) {
-//			return ((point.getX() <= this.getX1().getX()) && (point.getY()<= this.getX1().getY()) &&
-//					(point.getX() >=this.getX2().getX()) && (point.getY() >=this.getX2().getY()));
-//		} else if(this.getX1().getX() <= this.getX2().getX() && this.getX1().getY() >= this.getX2().getY()) {
-//			return ((point.getX() >= this.getX1().getX()) && (point.getY()<= this.getX1().getY()) &&
-//					(point.getX() <=this.getX2().getX()) && (point.getY() >=this.getX2().getY()));
-//		} else if(this.getX1().getX() >= this.getX2().getX() && this.getX1().getY() <= this.getX2().getY()) {
-//			return ((point.getX() <= this.getX1().getX()) && (point.getY()>= this.getX1().getY()) &&
-//					(point.getX() >=this.getX2().getX()) && (point.getY() <=this.getX2().getY()));
-//		} else {
-//			return false;
-//		}
-//	}
-
+	
+	
 	//======================================================================//
 	//======================= Getters and Setters ==========================//
 	//======================================================================//

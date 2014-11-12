@@ -1,7 +1,10 @@
 package langage;
 
-import java.awt.Graphics2D;
-
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class Cercle extends Chemin {
 
 	private int abscisseCentre;

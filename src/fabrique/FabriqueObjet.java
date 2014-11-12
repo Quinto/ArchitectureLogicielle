@@ -6,6 +6,11 @@ import langage.Crayon;
 import langage.Dessin;
 import langage.Objet;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class FabriqueObjet {
 
 	public static Objet creerCrayon(int largeurBordure, float opaciteBordure, Color couleur, float opacite){

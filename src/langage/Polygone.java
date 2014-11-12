@@ -1,9 +1,5 @@
 package langage;
 
-import java.awt.BasicStroke;
-import java.awt.Graphics2D;
-import java.awt.Point;
-
 /**
  * 
  * @author Sylla & Zaninetti
