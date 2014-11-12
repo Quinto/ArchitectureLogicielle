@@ -25,12 +25,12 @@ public class InterpreteurSVG implements Interpreteur {
 		File file = new File(d.getName() + ".svg");
 		try {
 			BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, true)));
-			output.newLine();
 			output.write("<?xml version=\"1.0\" standalone=\"no\"?>");
 			output.newLine();
 			output.write("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">");
 			output.newLine();
-			output.write("<svg width=" + d.getLargeur() + " height=" + d.getLongueur() + " version=1.1 xmlns=\"http://www.w3.org/2000/svg\">");
+			output.write("<svg width=\"" + d.getLargeur() + "\" height=\"" + d.getLongueur() +
+				"\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">");
 			output.newLine();
 			for(Objet o : d.getObjets()) {
 				output.write(this.interpreterObjet(o));
@@ -60,6 +60,7 @@ public class InterpreteurSVG implements Interpreteur {
 		if(o instanceof Polygone) {
 			s+="<polygon ";
 			s+="style=\"fill:" + ((Polygone) o).getCouleurRemplissage() + ";stroke:" + ((Polygone) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Polygone) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Polygone) o).getCrayon().getLargeurBordure() + ";\" />";
+
 		}
 		return s;
 	}
