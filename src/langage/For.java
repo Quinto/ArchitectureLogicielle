@@ -1,5 +1,10 @@
 package langage;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class For extends Instruction {
 
 	private Script script;

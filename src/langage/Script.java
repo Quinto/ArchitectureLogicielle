@@ -2,6 +2,11 @@ package langage;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class Script implements IScript {
 
 	private ArrayList<Instruction> liste;

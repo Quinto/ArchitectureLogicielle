@@ -3,18 +3,18 @@ package vue;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
 
 import langage.Dessin;
 import langage.Ligne;
 import langage.Objet;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class InterpreteurSVG implements Interpreteur {
 
 	@Override

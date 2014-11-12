@@ -7,6 +7,11 @@ import langage.IScript;
 import langage.Instruction;
 import langage.Script;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class FabriqueStructure {
 
 	public static Instruction creerFor(Script script, int nbIterations){

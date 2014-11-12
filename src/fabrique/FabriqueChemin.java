@@ -9,6 +9,11 @@ import langage.Ligne;
 import langage.Point;
 import langage.Polygone;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class FabriqueChemin {
 
 	public static Chemin creerCercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c, Dessin d) {

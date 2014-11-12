@@ -7,6 +7,11 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class Fenetre extends JFrame{
 
 	/**
