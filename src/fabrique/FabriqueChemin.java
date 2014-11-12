@@ -8,6 +8,7 @@ import langage.Dessin;
 import langage.Ligne;
 import langage.Point;
 import langage.Polygone;
+import langage.Rectangle;
 
 /**
  * 
@@ -32,4 +33,7 @@ public class FabriqueChemin {
 		return new Polygone(pointsX, pointsY, c, d);
 	}
 	
+	public static Chemin creerRectangle(int abscisseOrigine, int ordonneeOrigine, int longueur, int largeur, Crayon c, Dessin d) {
+		return new Rectangle(abscisseOrigine, ordonneeOrigine, longueur, largeur, c, d);
+	}
 }

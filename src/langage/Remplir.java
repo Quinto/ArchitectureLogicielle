@@ -18,7 +18,7 @@ public class Remplir extends Instruction {
 			((Polygone) chemin).setCouleurRemplissage(couleur);
 		}
 		else if(chemin instanceof Rectangle) {
-			
+			((Rectangle) chemin).setCouleurRemplissage(couleur);
 		}
 		else {
 			throw new UnsupportedOperationException("Impossible de remplir un chemin non ferme");

@@ -8,9 +8,11 @@ import java.io.OutputStreamWriter;
 
 import langage.Cercle;
 import langage.Dessin;
+import langage.Etiqueter;
 import langage.Ligne;
 import langage.Objet;
 import langage.Polygone;
+import langage.Rectangle;
 
 /**
  * 
@@ -61,6 +63,13 @@ public class InterpreteurSVG implements Interpreteur {
 			s+="<polygon ";
 			s+="style=\"fill:" + ((Polygone) o).getCouleurRemplissage() + ";stroke:" + ((Polygone) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Polygone) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Polygone) o).getCrayon().getLargeurBordure() + ";\" />";
 
+		}
+		if(o instanceof Rectangle) {
+			s+="<rect ";
+			s+="style=\"fill:" + ((Rectangle) o).getCouleurRemplissage() + ";stroke:" + ((Rectangle) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Rectangle) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Rectangle) o).getCrayon().getLargeurBordure() + ";\" />";
+		}
+		if(o instanceof Etiqueter) {
+			s+="";
 		}
 		return s;
 	}
