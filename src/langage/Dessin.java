@@ -23,7 +23,7 @@ public class Dessin implements Objet {
 		this.largeur = largeur;
 		this.contour = false;
 		this.objetsDessin = new ArrayList<Objet>();
-		objetsDessin.add(this);
+		//objetsDessin.add(this);
 	}
 	
 	public int getLongueur() {
@@ -64,5 +64,9 @@ public class Dessin implements Objet {
 	
 	public boolean estFerme() {
 		return contour;
+	}
+	
+	public List<Objet> getObjets() {
+		return objetsDessin;
 	}
 }

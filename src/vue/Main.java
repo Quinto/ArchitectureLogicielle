@@ -17,30 +17,36 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		IScript scriptPrincipal = FabriqueStructure.creerScript();
-		IScript scriptBoucle = FabriqueStructure.creerScript();
+		Script scriptPrincipal = FabriqueStructure.creerScript();
+		Script scriptBoucle = FabriqueStructure.creerScript();
 
-		Crayon c1 = FabriqueObjet.creerCrayon(...);
-		Crayon c2 = FabriqueObjet.creerCrayon(...);
+		Crayon c1 = FabriqueObjet.creerCrayon(0, 0, null, 0);
+//		Crayon c2 = FabriqueObjet.creerCrayon(...);
 
-		Dessin d = FabriqueObjet.creerDessin("mon dessin");
+		Dessin d = FabriqueObjet.creerDessin("mon dessin", 500, 500);
 		Interpreteur i = FabriqueStructure.creerInterpreteurSVG();
 
-		Instruction i1 = FabriqueChemin.creerLigne(new Point(1, 2), new Point(3, 1), c1, d);
+		Instruction i1 = FabriqueChemin.creerLigne(new Point(1, 2), new Point(100, 200), c1, d);
 		Instruction i2 = FabriqueChemin.creerLigne(new Point(4,0), new Point(3, 0), c1, d);
-		Instruction i3 = FabriqueChemin.creerPolygone(...);
+//		Instruction i3 = FabriqueChemin.creerPolygone(...);
 
-		scriptBoucle.add(i1);
-		scriptBoucle.add(i2);
-		scriptBoucle.add(i3);
+//		scriptBoucle.add(i1);
+//		scriptBoucle.add(i2);
+//		scriptBoucle.add(i3);
 
-		Instruction i4 = FabriqueStructure.creerFor((Script) scriptBoucle, 3);
-		Instruction i5 = fab.creerInterpreteurSVG(d);
+//		Instruction i4 = FabriqueStructure.creerFor((Script) scriptBoucle, 3);
+//		Instruction i5 = fab.creerInterpreteurSVG(d);
 
-		scriptPrincipal.add(i4);
-		scriptPrincipal.add(i5);
+		scriptPrincipal.addInstruction(i1);
+		scriptPrincipal.addInstruction(i2);
 
 		scriptPrincipal.execute();
+		try {
+			i.interpreter(d);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

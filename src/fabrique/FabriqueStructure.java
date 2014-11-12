@@ -13,7 +13,7 @@ public class FabriqueStructure {
 		return new For(script, nbIterations);
 	}
 	
-	public static IScript creerScript(){
+	public static Script creerScript(){
 		return new Script();
 	}
 	
