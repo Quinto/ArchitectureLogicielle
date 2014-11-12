@@ -14,6 +14,7 @@ public class Ligne extends Chemin {
 	private Point x1;
 	private Point x2;
 
+	private Dessin d;
 	private Crayon crayon;
 
 	//======================================================================//
@@ -33,22 +34,12 @@ public class Ligne extends Chemin {
 	/**
 	 * Cree une nouvelle instance de <i>Ligne</i> a partir de deux points.
 	 */
-	public Ligne(Point x1, Point x2, Crayon crayon) {
+	public Ligne(Point x1, Point x2, Crayon crayon, Dessin d) {
 		this.x1 = x1;
 		this.x2 = x2;
 		this.crayon = crayon;
+		this.d = d;
 	}
-
-
-	//======================================================================//
-	//==================== Ecriture methodes abstraites ====================//
-	//======================================================================//
-
-	@Override
-	public void dessinerChemin(Dessin d) {
-		d.dessiner(this);
-	}
-	
 	
 	//======================================================================//
 	//======================= Getters and Setters ==========================//
@@ -102,4 +93,7 @@ public class Ligne extends Chemin {
 		this.crayon = crayon;
 	}
 
+	public void execute() {
+		d.dessiner(this);
+	}
 }

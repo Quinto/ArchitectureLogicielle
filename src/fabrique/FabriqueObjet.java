@@ -13,7 +13,7 @@ import langage.Objet;
  */
 public class FabriqueObjet {
 
-	public static Crayon creerCrayon(int largeurBordure, float opaciteBordure, Color couleur, float opacite){
+	public static Crayon creerCrayon(int largeurBordure, float opaciteBordure, String couleur, float opacite){
 		return new Crayon(largeurBordure, opaciteBordure, couleur, opacite);
 	}
 	

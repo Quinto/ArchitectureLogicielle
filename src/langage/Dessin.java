@@ -41,8 +41,8 @@ public class Dessin implements Objet {
 		this.largeur = largeur;
 	}
 
-	public void dessiner(Chemin chemin) {
-		objetsDessin.add(chemin);
+	public void dessiner(Objet objet) {
+		objetsDessin.add(objet);
 	}
 	
 	public void inserer(Dessin dessin) {

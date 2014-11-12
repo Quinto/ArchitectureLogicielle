@@ -15,17 +15,17 @@ public class Crayon implements Objet{
 
 	protected int largeurBordure; // largeur de la bordure
 	protected float opaciteBordure; // opacite de la bordure
-	protected Color couleur; // couleur du chemin
+	protected String couleur; // couleur du chemin
 	protected float opacite; // opacite du chemin
 
 	public Crayon(){
 		this.largeurBordure = 1;
 		this.opaciteBordure = 1.0f;
-		this.couleur = Color.black;
+		this.couleur = "black";
 		this.opacite = 1.0f;
 	}
 
-	public Crayon(int largeurBordure, float opaciteBordure, Color couleur, float opacite){
+	public Crayon(int largeurBordure, float opaciteBordure, String couleur, float opacite){
 		this.largeurBordure = largeurBordure;
 		this.opaciteBordure = opaciteBordure;
 		this.couleur = couleur;
@@ -48,11 +48,11 @@ public class Crayon implements Objet{
 		this.opaciteBordure = opaciteBordure;
 	}
 
-	public Color getCouleur() {
+	public String getCouleur() {
 		return couleur;
 	}
 
-	public void setCouleur(Color couleur) {
+	public void setCouleur(String couleur) {
 		this.couleur = couleur;
 	}
 

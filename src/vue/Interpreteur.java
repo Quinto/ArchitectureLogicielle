@@ -12,6 +12,6 @@ import langage.Dessin;
  */
 public interface Interpreteur {
 
-	public File interpreter(Dessin d) throws IOException;
+	public File interpreter(Dessin d);
 
 }
