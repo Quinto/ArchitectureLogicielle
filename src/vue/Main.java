@@ -28,7 +28,7 @@ public class Main {
 		Crayon c1 = FabriqueObjet.creerCrayon(0, 0, null, 0);
 //		Crayon c2 = FabriqueObjet.creerCrayon(...);
 
-		Dessin d = FabriqueObjet.creerDessin("mon dessin", 500, 500);
+		Dessin d = FabriqueObjet.creerDessin("MonDessin.svg", 500, 500);
 		Interpreteur i = FabriqueStructure.creerInterpreteurSVG();
 
 		Instruction i1 = FabriqueChemin.creerLigne(new Point(1, 2), new Point(100, 200), c1, d);
