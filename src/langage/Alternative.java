@@ -1,5 +1,10 @@
 package langage;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class Alternative extends Instruction {
 
 	private boolean condition;
@@ -12,6 +17,9 @@ public class Alternative extends Instruction {
 		this.res2 = res2;
 	}
 	
+	/**
+	 * Procedure permettant d'executer l'alternative
+	 */
 	public void execute() {
 		if(condition) {
 			res1.execute();

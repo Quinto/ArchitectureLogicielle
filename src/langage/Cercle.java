@@ -24,6 +24,19 @@ public class Cercle extends Chemin {
 		couleurRemplissage = "none";
 	}
 	
+	/**
+	 * Procedure permettant d'ajouter le cercle dans le dessin
+	 */
+	public void execute() {
+		d.dessiner(this);
+	}
+	
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
 	public String getCouleurRemplissage() {
 		return couleurRemplissage;
 	}
@@ -64,7 +77,4 @@ public class Cercle extends Chemin {
 		crayon = c;
 	}
 
-	public void execute() {
-		d.dessiner(this);
-	}
 }

@@ -1,7 +1,5 @@
 package langage;
 
-import java.awt.Color;
-
 /**
  * 
  * @author Sylla & Zaninetti
@@ -32,6 +30,12 @@ public class Crayon implements Objet{
 		this.opacite = opacite;
 	}
 
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
 	public int getLargeurBordure() {
 		return largeurBordure;
 	}

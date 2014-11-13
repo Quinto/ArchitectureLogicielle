@@ -7,6 +7,9 @@ package langage;
  */
 public interface IScript {
 
+	/**
+	 * Etiquette : execute un script
+	 */
 	public void execute();
 
 }

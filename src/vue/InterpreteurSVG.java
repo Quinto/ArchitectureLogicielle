@@ -21,6 +21,9 @@ import langage.Rectangle;
  */
 public class InterpreteurSVG implements Interpreteur {
 
+	/**
+	 * Methode permettant d'interpreter un dessin
+	 */
 	@Override
 	public File interpreter(Dessin d) {
 		// TODO Auto-generated method stub
@@ -48,6 +51,13 @@ public class InterpreteurSVG implements Interpreteur {
 		return file;
 	}
 
+	/**
+	 * Methode permettant d'interpreter un objet a dessiner
+	 * @param o : objet a interpreter
+	 * @return une chaine de caractere correspondant a l'objet
+	 * interprete
+	 * 
+	 */
 	private String interpreterObjet(Objet o) {
 		// TODO Auto-generated method stub
 		String s = "";

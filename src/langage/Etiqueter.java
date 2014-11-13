@@ -1,5 +1,10 @@
 package langage;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *
+ */
 public class Etiqueter extends Instruction implements Objet {
 
 	private String texte;
@@ -10,15 +15,13 @@ public class Etiqueter extends Instruction implements Objet {
 	private int taillePolice;
 	private String couleurRemplissage;
 	private Dessin dessin;
+
+	/************************************************************
+	 ************************************************************
+	 *********************** CONSTRUCTEURS **********************
+	 ************************************************************
+	 ************************************************************/
 	
-	public String getCouleurRemplissage() {
-		return couleurRemplissage;
-	}
-
-	public void setCouleurRemplissage(String couleurRemplissage) {
-		this.couleurRemplissage = couleurRemplissage;
-	}
-
 	public Etiqueter(String texte, int origineX, int origineY, Dessin dessin) {
 		this.texte = texte;
 		this.origineX = origineX;
@@ -52,6 +55,27 @@ public class Etiqueter extends Instruction implements Objet {
 		this.couleur = couleur;
 	}
 	
+	/**
+	 * Methode permettant de dessiner une etiquette
+	 */
+	public void execute() {
+		dessin.dessiner(this);
+	}
+	
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
+	public String getCouleurRemplissage() {
+		return couleurRemplissage;
+	}
+
+	public void setCouleurRemplissage(String couleurRemplissage) {
+		this.couleurRemplissage = couleurRemplissage;
+	}
+	
 	public String getCouleur() {
 		return couleur;
 	}
@@ -66,10 +90,6 @@ public class Etiqueter extends Instruction implements Objet {
 
 	public void setTaillePolice(int taillePolice) {
 		this.taillePolice = taillePolice;
-	}
-
-	public void execute() {
-		dessin.dessiner(this);
 	}
 
 	public String getTexte() {
@@ -93,6 +113,6 @@ public class Etiqueter extends Instruction implements Objet {
 	}
 	
 	public void setOrigineY(int origineY) {
-		this.origineX = origineX;
+		this.origineY = origineY;
 	}
 }

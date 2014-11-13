@@ -1,7 +1,6 @@
 package vue;
 
 import java.io.File;
-import java.io.IOException;
 
 import langage.Dessin;
 
@@ -12,6 +11,12 @@ import langage.Dessin;
  */
 public interface Interpreteur {
 
+	/**
+	 * Methode permettant d'interpreter un dessin
+	 * @param d : dessin a interpreter
+	 * @return un fichier format svg correpondant au dessin
+	 * interprete
+	 */
 	public File interpreter(Dessin d);
 
 }

@@ -19,6 +19,30 @@ public class Polygone extends Chemin {
 	private Crayon crayon;
 	private String couleurRemplissage;
 	
+	/**
+	 * Cree une nouvelle instance de <i>Polygone</i> par defaut.
+	 */
+	public Polygone(int[] pointsX, int[] pointsY, Crayon c, Dessin d) {
+		this.pointsX = pointsX;
+		this.pointsY = pointsY;
+		this.crayon = c;
+		this.d = d;
+	}
+	
+	/**
+	 * Procedure permettant de rajouter le polygone courant dans les
+	 * objets a dessiner
+	 */
+	public void execute() {
+		d.dessiner(this);
+	}
+	
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
 	public Crayon getCrayon() {
 		return crayon;
 	}
@@ -35,32 +59,12 @@ public class Polygone extends Chemin {
 		this.couleurRemplissage = couleurRemplissage;
 	}
 
-	private int minX; // valeur minimale des coordonnees x
-	private int minY; // valeur minimale des coordonnees y
-	private int maxX; // valeur maximale des coordonnees x
-	private int maxY; // valeur maximale des coordonnees y
-
-
-	//======================================================================//
-	//========================== Constructeurs =============================//
-	//======================================================================//
-
 	public int getNbPoints() {
 		return nbPoints;
 	}
 
 	public void setNbPoints(int nbPoints) {
 		this.nbPoints = nbPoints;
-	}
-
-	/**
-	 * Cree une nouvelle instance de <i>Polygone</i> par defaut.
-	 */
-	public Polygone(int[] pointsX, int[] pointsY, Crayon c, Dessin d) {
-		this.pointsX = pointsX;
-		this.pointsY = pointsY;
-		this.crayon = c;
-		this.d = d;
 	}
 
 	public int[] getPointsX() {
@@ -77,9 +81,5 @@ public class Polygone extends Chemin {
 
 	public void setPointsY(int[] pointsY) {
 		this.pointsY = pointsY;
-	}
-
-	public void execute() {
-		d.dessiner(this);
 	}
 }

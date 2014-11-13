@@ -41,59 +41,40 @@ public class Ligne extends Chemin {
 		this.d = d;
 	}
 	
-	//======================================================================//
-	//======================= Getters and Setters ==========================//
-	//======================================================================//
-
 	/**
-	 * 
-	 * @return
+	 * Procedure permettant d'ajouter la ligne dans les objets a dessiner
 	 */
+	public void execute() {
+		d.dessiner(this);
+	}
+	
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+
 	public Point getX1() {
 		return x1;
 	}
-
-	/**
-	 * 
-	 * @param points
-	 */
+	
 	public void setX1(Point x1) {
 		this.x1 = x1;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
 	public Point getX2() {
 		return x2;
 	}
 
-	/**
-	 * 
-	 * @param points
-	 */
 	public void setX2(Point x2) {
 		this.x2 = x2;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
 	public Crayon getCrayon(){
 		return this.crayon;
 	}
 
-	/**
-	 * 
-	 * @param crayon
-	 */
 	public void setCrayon(Crayon crayon){
 		this.crayon = crayon;
-	}
-
-	public void execute() {
-		d.dessiner(this);
 	}
 }

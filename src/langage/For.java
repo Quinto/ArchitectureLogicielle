@@ -15,11 +15,28 @@ public class For extends Instruction {
 		this.nbFois = nbFois;
 	}
 
+	/**
+	 * Procedure permettant d'executer la boucle For
+	 */
+	@Override
+	public void execute(){
+		for(int i=0; i<this.getNbFois(); i++){
+			this.getScript().execute();
+		}
+		
+	}
+	
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
 	public Script getScript() {
 		return script;
 	}
 
-	public void setI(Script s) {
+	public void setScript(Script s) {
 		this.script = s;
 	}
 
@@ -29,13 +46,5 @@ public class For extends Instruction {
 
 	public void setNbFois(int nbFois) {
 		this.nbFois = nbFois;
-	}
-	
-	@Override
-	public void execute(){
-		for(int i=0; i<this.getNbFois(); i++){
-			this.getScript().execute();
-		}
-		
 	}
 }

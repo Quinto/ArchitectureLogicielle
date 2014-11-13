@@ -9,22 +9,44 @@ import java.util.List;
  *
  */
 public class Dessin implements Objet {
-	
+
 	private int longueur;
 	private int largeur;
 	private boolean contour;
 	private List<Objet> objetsDessin;
 	private String name;
-	
+
 	public Dessin(String name, int longueur, int largeur) {
 		this.name = name;
 		this.longueur = longueur;
 		this.largeur = largeur;
 		this.contour = false;
 		this.objetsDessin = new ArrayList<Objet>();
-		//objetsDessin.add(this);
 	}
-	
+
+	/**
+	 * Methode permettant d'ajouter un objet dans l'ensemble des
+	 * objets a dessiner
+	 * @param objet : objet a ajouter
+	 */
+	public void dessiner(Objet objet) {
+		objetsDessin.add(objet);
+	}
+
+	/**
+	 * Methode permettant d'inserer un dessin dans le dessin courant
+	 * @param dessin : dessin a inserer
+	 */
+	public void inserer(Dessin dessin) {
+		objetsDessin.add(dessin);
+	}
+
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+
 	public int getLongueur() {
 		return longueur;
 	}
@@ -41,14 +63,6 @@ public class Dessin implements Objet {
 		this.largeur = largeur;
 	}
 
-	public void dessiner(Objet objet) {
-		objetsDessin.add(objet);
-	}
-	
-	public void inserer(Dessin dessin) {
-		objetsDessin.add(dessin);
-	}
-	
 	public String getName() {
 		return name;
 	}
@@ -60,11 +74,11 @@ public class Dessin implements Objet {
 	public void dessinFerme() {
 		contour = true;
 	}
-	
+
 	public boolean estFerme() {
 		return contour;
 	}
-	
+
 	public List<Objet> getObjets() {
 		return objetsDessin;
 	}

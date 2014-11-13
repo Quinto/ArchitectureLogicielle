@@ -1,5 +1,10 @@
 package langage;
 
+/**
+ * 
+ * @author Sylla & Zaninetti
+ *																					
+ */
 public class Rectangle extends Chemin {
 
 	private int abscisseOrigine;
@@ -21,16 +26,26 @@ public class Rectangle extends Chemin {
 		this.d = d;
 	}
 	
+	/**
+	 * Procedure permettant de rajouter le rectangle courant dans
+	 * les objets a dessiner
+	 */
+	public void execute() {
+		d.dessiner(this);
+	}
+	
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
 	public Crayon getCrayon() {
 		return c;
 	}
 
 	public void setCrayon(Crayon c) {
 		this.c = c;
-	}
-
-	public void execute() {
-		d.dessiner(this);
 	}
 
 	public int getAbscisseOrigine() {
