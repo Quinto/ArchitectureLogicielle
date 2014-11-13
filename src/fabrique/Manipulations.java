@@ -4,7 +4,6 @@ import langage.Chemin;
 import langage.Dessin;
 import langage.Etiqueter;
 import langage.Objet;
-import langage.Point;
 import langage.Remplir;
 
 public class Manipulations {

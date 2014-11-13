@@ -6,7 +6,6 @@ import langage.Chemin;
 import langage.Crayon;
 import langage.Dessin;
 import langage.Ligne;
-import langage.Point;
 import langage.Polygone;
 import langage.Rectangle;
 

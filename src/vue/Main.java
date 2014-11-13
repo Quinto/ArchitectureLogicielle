@@ -10,7 +10,6 @@ import langage.Dessin;
 import langage.IScript;
 import langage.Instruction;
 import langage.Objet;
-import langage.Point;
 import langage.Script;
 import langage.Sequence;
 
@@ -46,7 +45,7 @@ public class Main {
 
 //		Instruction i4 = FabriqueStructure.For((Script) scriptBoucle, 3);
 		
-		Instruction i5 = Manipulations.Etiqueter("DEWIS", 350, 350, d, 200, "red");
+		Instruction i5 = Manipulations.Etiqueter("Hello world", 350, 350, d, 200, "red");
 		Instruction i6 = Manipulations.Remplir((Objet) i5, "orange");
 		
 		Sequence s = FabriqueStructure.Sequence();
