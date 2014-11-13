@@ -2,6 +2,9 @@ package fabrique;
 
 import langage.Crayon;
 import langage.Dessin;
+import vue.Interpreteur;
+import vue.InterpreteurSVG;
+import langage.Script;
 
 /**
  * 
@@ -31,5 +34,21 @@ public class FabriqueObjet {
 	 */
 	public static Dessin creerDessin(String name, int longueur, int largeur){
 		return new Dessin(name, longueur, largeur);
+	}
+	
+	/**
+	 * Fabrique permettant de creer un script
+	 * @return un script par default
+	 */
+	public static Script creerScript(){
+		return new Script();
+	}
+	
+	/**
+	 * Fabrique permettant de creer un interpreteur SVG
+	 * @return un interpreteur SVG par defaut
+	 */
+	public static Interpreteur creerInterpreteurSVG(){
+		return new InterpreteurSVG();
 	}
 }
