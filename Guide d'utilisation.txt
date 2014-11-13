@@ -1,0 +1,73 @@
+*************************************************************************************************************************************************************
+***************************************************************** GUIDE D'UTILISATION ***********************************************************************
+******************************************************************* DESSIN VECTORIEL ************************************************************************
+*************************************************************************************************************************************************************
+
+
+
+L'utilisateur peut creer un dessin vectoriel en ecrivant un ensemble d'instrcutions compréhensibles par l'interpréteur SVG. Ainsi, il définit son dessin vectoriel dans la méthode main de la classe Main. Il commence par déclarer un nouveau script et un nouveau dessin comme ceci : 
+
+	Script scriptPrincipal = FabriqueObjet.creerScript();
+	Dessin d = FabriqueObjet.creerDessin(nomDuDessin);
+
+L'utilisateur peut se créer différents crayons qu'il pourra utiliser pour tracer les chemins : 
+
+	Crayon c = FabriqueObjet.creerCrayon(largeurBordure, opaciteBordure, couleur)
+
+Note : La couleur est une chaine de caractère (String) étant le nom de la couleur voulue en anglais. Il peut ainsi définir des paramètres propres au crayon comme la largeur de la bordure du crayon et l'opacité de la bordure.
+
+L'utilisateur choisit ensuite un interpréteur pour son dessin : 
+
+	Interpreteur i = FabriqueObjet.creerInterpreteurSVG();
+
+L'utilisateur peut alors définir les différentes instructions qui constitueront son script :
+
+	* il peut simplement dessiner des chemins : 
+
+	Instruction i1 = DessinerChemin.creerLigne(abscissePoint1, ordonneePoint1, abscissePoint2, ordonneePoint2, crayon, dessin);
+
+	Cette instruction permet de créer une ligne dans le dessin dessin avec le crayon entre les points aux coordonnées choisies. 
+	Instruction i2 = DessinerChemin.creerCercle(abscisseCentre, ordonneeCentre, rayon, crayon, dessin);
+
+	Même chose pour un cercle en définissant son centre et son rayon.
+
+	* il peut utiliser des structures plus complexes : 
+
+	Instruction i3 = FabriqueStructure.For(script, nbFois); 
+
+	Cette instrcution permet de répéter nbFois les instructions contenues dans le script.
+
+	Instruction i4 = FabriqueStructure.Alternative(bool, i1, i2); 
+
+	Cette instruction permet d'exécuter i1 si bool est true et i2 sinon 
+Note : Alternative ne prend pas forcément que des Instructions en argument, il peut aussi prendre des scripts entiers.
+
+	Instruction i5 = FabriqueStructure.Sequence();
+
+	Cette instruction permet de créer une séquence puis : 
+
+	i5.addToSequence(instruction);
+
+	permet d'ajouter dans l'ordre d'exécution souhaité les instructions constituant la séquence. Par exemple : 
+	i5.addToSequence(i2);
+	i5.addToSequence(i1);
+
+	fera s'exécuter i2 puis i1 quand la séquence sera exécutée.
+
+L'utilisateur peut faire d'autres manipulations. Par exemple, 
+
+	Instruction i6 = Manipulations.Remplir(i2, "yellow");
+
+	permet de récupérer le cercle créé par i2 et de le remplir en jaune.
+	Instruction i7 = Manipulations.Etiqueter(texte, origineX, origineY, dessin, taillePolice, couleur);
+
+	permet de créer une étiquette contenant le texte texte dont le coin inférieur gauche est placé en (origineX, origineY) dans le dessin dessin et dont la taille de police et la couleur sont définies.
+
+Lorsque l'utilisateur a écrit ses différentes instructions il doit les attacher à un script dans l'ordre d'exécution voulu :
+
+	scriptPrincipal.addInstruction(instruction);
+Enfin, l'utilisateur peut exécuter son script et interpréter le dessin créé : 
+	scriptPrincipal.execute();
+	i.interpreter(d);
+
+Un fichier svg est généré à l'exécution et peut être lu par des navigateurs web tels que Mozilla ou d'autres logiciels appropriés comme Inkscape.
