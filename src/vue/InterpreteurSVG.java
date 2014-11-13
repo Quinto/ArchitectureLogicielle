@@ -52,7 +52,7 @@ public class InterpreteurSVG implements Interpreteur {
 		// TODO Auto-generated method stub
 		String s = "";
 		if(o instanceof Ligne) {
-			s+="<line x1=\"" + ((Ligne) o).getX1().getX() + "\" y1=\"" + ((Ligne) o).getX1().getY() + "\" x2=\"" + ((Ligne) o).getX2().getX() + "\" y2=\"" + ((Ligne) o).getX2().getY() + "\" ";
+			s+="<line x1=\"" + ((Ligne) o).getAbscisseX1() + "\" y1=\"" + ((Ligne) o).getOrdonneeX1() + "\" x2=\"" + ((Ligne) o).getAbscisseX2() + "\" y2=\"" + ((Ligne) o).getOrdonneeX2() + "\" ";
 			s+="style=\"fill:none;stroke:" + ((Ligne) o).getCrayon().getCouleur() + ";stroke-opacity:" + ((Ligne) o).getCrayon().getOpaciteBordure() + ";stroke-width:" + ((Ligne) o).getCrayon().getLargeurBordure() + ";\" />";
 		}
 		if(o instanceof Cercle) {

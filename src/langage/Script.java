@@ -9,17 +9,17 @@ import java.util.ArrayList;
  */
 public class Script implements IScript {
 
-	private ArrayList<Instruction> liste;
+	private ArrayList<IScript> liste;
 
 	public Script(){
-		this.liste = new ArrayList<Instruction>();
+		this.liste = new ArrayList<IScript>();
 	}
 	
-	public ArrayList<Instruction> getListe() {
+	public ArrayList<IScript> getListe() {
 		return liste;
 	}
 
-	public void setListe(ArrayList<Instruction> liste) {
+	public void setListe(ArrayList<IScript> liste) {
 		this.liste = liste;
 	}
 	
@@ -32,7 +32,7 @@ public class Script implements IScript {
 	}
 	
 	public void execute(){
-		for(Instruction i : liste){
+		for(IScript i : liste){
 			i.execute();
 		}
 	}

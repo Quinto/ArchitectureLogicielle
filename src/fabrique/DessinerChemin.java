@@ -25,8 +25,8 @@ public class DessinerChemin {
 		return new Courbe();
 	}*/
 	
-	public static Chemin creerLigne(Point x1, Point x2, Crayon c, Dessin d) {
-		return new Ligne(x1, x2, c, d);
+	public static Chemin creerLigne(int abscisseX1, int ordonneeX1, int abscisseX2, int ordonneeX2, Crayon c, Dessin d) {
+		return new Ligne(abscisseX1, abscisseX2, ordonneeX1, ordonneeX2, c, d);
 	}
 	
 	public static Chemin creerPolygone(int[] pointsX, int[] pointsY, Crayon c, Dessin d) {

@@ -5,7 +5,7 @@ package langage;
  * @author Sylla & Zaninetti
  *																					
  */
-public class Polygone extends Chemin {
+public class Polygone extends CheminFerme {
 
 	//======================================================================//
 	//============================ Variables ===============================//
@@ -17,7 +17,6 @@ public class Polygone extends Chemin {
 	
 	private Dessin d;
 	private Crayon crayon;
-	private String couleurRemplissage;
 	
 	public Crayon getCrayon() {
 		return crayon;

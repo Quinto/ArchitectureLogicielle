@@ -11,8 +11,10 @@ public class Ligne extends Chemin {
 	//============================ Variables ===============================//
 	//======================================================================//
 
-	private Point x1;
-	private Point x2;
+	private int abscisseX1;
+	private int abscisseX2;
+	private int ordonneeX1;
+	private int ordonneeX2;
 
 	private Dessin d;
 	private Crayon crayon;
@@ -25,8 +27,10 @@ public class Ligne extends Chemin {
 	 * Cree une nouvelle instance de <i>Ligne</i> par defaut.
 	 */
 	public Ligne() {
-		this.x1 = new Point(0, 0);
-		this.x2 = new Point(1, 1);
+		this.abscisseX1 = 0;
+		this.abscisseX2 = 1;
+		this.ordonneeX1 = 0;
+		this.ordonneeX2 = 1;
 
 		this.crayon = new Crayon();
 	}
@@ -34,9 +38,11 @@ public class Ligne extends Chemin {
 	/**
 	 * Cree une nouvelle instance de <i>Ligne</i> a partir de deux points.
 	 */
-	public Ligne(Point x1, Point x2, Crayon crayon, Dessin d) {
-		this.x1 = x1;
-		this.x2 = x2;
+	public Ligne(int abscisseX1, int abscisseX2, int ordonneeX1, int ordonneeX2, Crayon crayon, Dessin d) {
+		this.abscisseX1 = abscisseX1;
+		this.abscisseX2 = abscisseX2;
+		this.ordonneeX1 = ordonneeX1;
+		this.ordonneeX2 = ordonneeX2;
 		this.crayon = crayon;
 		this.d = d;
 	}
@@ -45,36 +51,36 @@ public class Ligne extends Chemin {
 	//======================= Getters and Setters ==========================//
 	//======================================================================//
 
-	/**
-	 * 
-	 * @return
-	 */
-	public Point getX1() {
-		return x1;
+	public int getAbscisseX1() {
+		return abscisseX1;
 	}
 
-	/**
-	 * 
-	 * @param points
-	 */
-	public void setX1(Point x1) {
-		this.x1 = x1;
+	public void setAbscisseX1(int abscisseX1) {
+		this.abscisseX1 = abscisseX1;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
-	public Point getX2() {
-		return x2;
+	public int getAbscisseX2() {
+		return abscisseX2;
 	}
 
-	/**
-	 * 
-	 * @param points
-	 */
-	public void setX2(Point x2) {
-		this.x2 = x2;
+	public void setAbscisseX2(int abscisseX2) {
+		this.abscisseX2 = abscisseX2;
+	}
+
+	public int getOrdonneeX1() {
+		return ordonneeX1;
+	}
+
+	public void setOrdonneeX1(int ordonneeX1) {
+		this.ordonneeX1 = ordonneeX1;
+	}
+
+	public int getOrdonneeX2() {
+		return ordonneeX2;
+	}
+
+	public void setOrdonneeX2(int ordonneeX2) {
+		this.ordonneeX2 = ordonneeX2;
 	}
 
 	/**

@@ -35,8 +35,8 @@ public class Main {
 		Dessin d = FabriqueObjet.creerDessin("MonDessin", 10000, 10000);
 		Interpreteur i = FabriqueObjet.creerInterpreteurSVG();
 
-		Instruction i1 = DessinerChemin.creerLigne(new Point(1, 2), new Point(100, 200), c1, d);
-		Instruction i2 = DessinerChemin.creerLigne(new Point(4,0), new Point(300, 0), c1, d);
+		Instruction i1 = DessinerChemin.creerLigne(1, 2, 100, 200, c1, d);
+		Instruction i2 = DessinerChemin.creerLigne(4,0, 300, 0, c1, d);
 		Instruction i3 = DessinerChemin.creerCercle(40, 120, 30, c1, d);
 		Instruction i4 = Manipulations.Remplir((Objet) i3, "yellow");
 

@@ -5,4 +5,11 @@
 <circle r="30" cx="40" cy="120" style="fill:yellow;stroke:red;stroke-opacity:1.0;stroke-width:1;" />
 <line x1="1" y1="2" x2="100" y2="200" style="fill:none;stroke:red;stroke-opacity:1.0;stroke-width:1;" />
 <text x="350" y="350" style="fill:orange;stroke:red;font-size:200px;">DEWIS</text>
+</svg><?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="10000" height="10000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<line x1="4" y1="0" x2="300" y2="0" style="fill:none;stroke:red;stroke-opacity:1.0;stroke-width:1;" />
+<circle r="30" cx="40" cy="120" style="fill:yellow;stroke:red;stroke-opacity:1.0;stroke-width:1;" />
+<line x1="1" y1="2" x2="100" y2="200" style="fill:none;stroke:red;stroke-opacity:1.0;stroke-width:1;" />
+<text x="350" y="350" style="fill:orange;stroke:red;font-size:200px;">DEWIS</text>
 </svg>
