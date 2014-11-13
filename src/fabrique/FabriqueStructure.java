@@ -27,12 +27,4 @@ public class FabriqueStructure {
 	public static Instruction Alternative(boolean condition, IScript res1, IScript res2) {
 		return new Alternative(condition, res1, res2);
 	}
-	
-	public static Script creerScript(){
-		return new Script();
-	}
-	
-	public static Interpreteur creerInterpreteurSVG(){
-		return new InterpreteurSVG();
-	}
 }

@@ -26,14 +26,14 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		Script scriptPrincipal = FabriqueStructure.creerScript();
-		Script scriptBoucle = FabriqueStructure.creerScript();
+		Script scriptPrincipal = FabriqueObjet.creerScript();
+		Script scriptBoucle = FabriqueObjet.creerScript();
 
 		Crayon c1 = FabriqueObjet.creerCrayon(1, 1, "red", 0);
 //		Crayon c2 = FabriqueObjet.creerCrayon(...);
 
 		Dessin d = FabriqueObjet.creerDessin("MonDessin", 10000, 10000);
-		Interpreteur i = FabriqueStructure.creerInterpreteurSVG();
+		Interpreteur i = FabriqueObjet.creerInterpreteurSVG();
 
 		Instruction i1 = DessinerChemin.creerLigne(new Point(1, 2), new Point(100, 200), c1, d);
 		Instruction i2 = DessinerChemin.creerLigne(new Point(4,0), new Point(300, 0), c1, d);
