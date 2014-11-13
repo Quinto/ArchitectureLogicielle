@@ -20,14 +20,8 @@ public class Remplir extends Instruction {
 	 * suivant la nature de la forme : Cercle, Ligne...
 	 */
 	public void execute() throws UnsupportedOperationException {
-		if(objet instanceof Cercle) {
-			((Cercle) objet).setCouleurRemplissage(couleur);
-		}
-		else if(objet instanceof Polygone) {
-			((Polygone) objet).setCouleurRemplissage(couleur);
-		}
-		else if(objet instanceof Rectangle) {
-			((Rectangle) objet).setCouleurRemplissage(couleur);
+		if(objet instanceof CheminFerme) {
+			((CheminFerme) objet).setCouleurRemplissage(couleur);
 		}
 		else if(objet instanceof Etiqueter) {
 			((Etiqueter) objet).setCouleurRemplissage(couleur);

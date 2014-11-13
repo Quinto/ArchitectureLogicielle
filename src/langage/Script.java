@@ -9,12 +9,27 @@ import java.util.ArrayList;
  */
 public class Script implements IScript {
 
-	private ArrayList<Instruction> liste;
+	private ArrayList<IScript> liste;
 
 	public Script(){
-		this.liste = new ArrayList<Instruction>();
+		this.liste = new ArrayList<IScript>();
+	}
+
+	/************************************************************
+	 ************************************************************
+	 ******************** GETTERS AND SETTERS *******************
+	 ************************************************************
+	 ************************************************************/
+	
+	public ArrayList<IScript> getListe() {
+		return liste;
+	}
+
+	public void setListe(ArrayList<IScript> liste) {
+		this.liste = liste;
 	}
 	
+
 	/**
 	 * Methode permettant d'ajouter une instruction au script
 	 * @param i : instruction a rajouter
@@ -36,22 +51,12 @@ public class Script implements IScript {
 	 * les instructions qu'il contient
 	 */
 	public void execute(){
-		for(Instruction i : liste){
+		for(IScript i : liste){
 			i.execute();
 		}
 	}
 	
-	/************************************************************
-	 ************************************************************
-	 ******************** GETTERS AND SETTERS *******************
-	 ************************************************************
-	 ************************************************************/
-	
-	public ArrayList<Instruction> getListe() {
-		return liste;
-	}
 
-	public void setListe(ArrayList<Instruction> liste) {
-		this.liste = liste;
-	}
+	
+
 }

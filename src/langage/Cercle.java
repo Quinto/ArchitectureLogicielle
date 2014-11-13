@@ -5,7 +5,7 @@ package langage;
  * @author Sylla & Zaninetti
  *
  */
-public class Cercle extends Chemin {
+public class Cercle extends CheminFerme {
 
 	private int abscisseCentre;
 	private int ordonneeCentre;
@@ -13,7 +13,6 @@ public class Cercle extends Chemin {
 	
 	private Dessin d;
 	private Crayon crayon;
-	private String couleurRemplissage;
 	
 	public Cercle(int abscisseCentre, int ordonneeCentre, int rayon, Crayon c, Dessin d) {
 		this.abscisseCentre = abscisseCentre;

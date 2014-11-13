@@ -2,11 +2,9 @@ package fabrique;
 
 import langage.Cercle;
 import langage.Chemin;
-//import langage.Courbe;
 import langage.Crayon;
 import langage.Dessin;
 import langage.Ligne;
-import langage.Point;
 import langage.Polygone;
 import langage.Rectangle;
 
@@ -38,8 +36,9 @@ public class DessinerChemin {
 	 * @param d : dessin permettant de sauvegarder le segment
 	 * @return une ligne avec les donnees fournies
 	 */
-	public static Chemin creerLigne(Point x1, Point x2, Crayon c, Dessin d) {
-		return new Ligne(x1, x2, c, d);
+	
+	public static Chemin creerLigne(int abscisseX1, int ordonneeX1, int abscisseX2, int ordonneeX2, Crayon c, Dessin d) {
+		return new Ligne(abscisseX1, abscisseX2, ordonneeX1, ordonneeX2, c, d);
 	}
 	
 	/**

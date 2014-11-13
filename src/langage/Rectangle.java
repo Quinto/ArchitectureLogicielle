@@ -1,11 +1,10 @@
 package langage;
-
 /**
  * 
  * @author Sylla & Zaninetti
  *																					
  */
-public class Rectangle extends Chemin {
+public class Rectangle extends CheminFerme {
 
 	private int abscisseOrigine;
 	private int ordonneeOrigine;
@@ -15,7 +14,6 @@ public class Rectangle extends Chemin {
 	
 	private Dessin d;
 	private Crayon c;
-	private String couleurRemplissage;
 	
 	public Rectangle(int abscisseOrigine, int ordonneeOrigine, int longueur, int largeur, Crayon c, Dessin d) {
 		this.abscisseOrigine = abscisseOrigine;

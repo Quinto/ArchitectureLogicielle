@@ -8,7 +8,6 @@ import langage.Crayon;
 import langage.Dessin;
 import langage.Instruction;
 import langage.Objet;
-import langage.Point;
 import langage.Script;
 import langage.Sequence;
 
@@ -31,11 +30,19 @@ public class Main {
 		Dessin d = FabriqueObjet.creerDessin("MonDessin", 10000, 10000);
 		Interpreteur i = FabriqueObjet.creerInterpreteurSVG();
 
-		Instruction i1 = DessinerChemin.creerLigne(new Point(1, 2), new Point(100, 200), c1, d);
-		Instruction i2 = DessinerChemin.creerLigne(new Point(4,0), new Point(300, 0), c1, d);
+		Instruction i1 = DessinerChemin.creerLigne(1, 2, 100, 200, c1, d);
+		Instruction i2 = DessinerChemin.creerLigne(4,0, 300, 0, c1, d);
 		Instruction i3 = DessinerChemin.creerCercle(40, 120, 30, c1, d);
 		Instruction i4 = Manipulations.Remplir((Objet) i3, "yellow");
-		Instruction i5 = Manipulations.Etiqueter("DEWIS", 350, 350, d, 200, "red");
+		
+//		scriptBoucle.add(i1);
+//		scriptBoucle.add(i2);
+//		scriptBoucle.add(i3);
+
+//		Instruction i4 = FabriqueStructure.For((Script) scriptBoucle, 3);
+		
+		Instruction i5 = Manipulations.Etiqueter("Hello world", 350, 350, d, 200, "red");
+
 		Instruction i6 = Manipulations.Remplir((Objet) i5, "orange");
 		
 		Sequence s = FabriqueStructure.Sequence();
